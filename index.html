@@ -3,124 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vanessa Duran — Moda, Estilo e Beleza">
-    <title>Vanessa Duran | Moda & Estilo</title>
+    <title>Contato — Vanessa Duran</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="imagens/favicon.ico">
 </head>
 <body>
-    <!-- Efeitos de Fundo -->
     <div class="bg-grade"></div>
     <div class="bg-glow-1"></div>
     <div class="bg-glow-2"></div>
 
-    <!-- Navegação -->
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">VANESSA DURAN</a>
-            
             <ul class="nav-links">
-                <li><a href="#inicio" class="nav-link active">Início</a></li>
-                <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                <li><a href="#servicos" class="nav-link">Serviços</a></li>
-                <li><a href="#galeria" class="nav-link">Galeria</a></li>
-                <li><a href="contato.html" class="nav-link">Contato</a></li>
+                <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+                <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="index.html#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="index.html#galeria" class="nav-link">Galeria</a></li>
+                <li><a href="contato.html" class="nav-link active">Contato</a></li>
             </ul>
-
             <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
         </div>
     </nav>
 
-    <!-- Página Inicial -->
-    <section id="inicio" class="hero">
-        <div class="container hero-content">
-            <div class="profile-img-wrapper">
-                <img src="imagens/foto-perfil.jpg" alt="Vanessa Duran" class="profile-img">
-            </div>
-            <h1>Vanessa Duran</h1>
-            <p class="hero-subtitle">Moda • Estilo • Beleza</p>
-            <div class="hero-buttons">
-                <a href="#galeria" class="btn btn-primary">Ver Galeria</a>
-                <a href="contato.html" class="btn btn-secondary">Contato</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sobre -->
-    <section id="sobre" class="about">
+    <section class="page-header">
         <div class="container">
-            <h2 class="section-title">SOBRE MIM</h2>
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="imagens/foto-sobre.jpg" alt="Vanessa Duran">
-                </div>
-                <div class="about-text">
-                    <h3>Seja bem-vinda(o) ao meu universo de estilo!</h3>
-                    <p>Olá! Sou Vanessa Duran, apaixonada por moda, beleza e expressão pessoal. Acredito que cada pessoa tem um estilo único e especial, e meu propósito é ajudar você a se sentir incrível na própria pele.</p>
-                    <p>Com um olhar atento às tendências e um toque de autenticidade, compartilho dicas, looks e inspirações para você brilhar todos os dias.</p>
-                    <a href="contato.html" class="btn-link">Fale comigo →</a>
-                </div>
-            </div>
+            <h1>Entre em Contato</h1>
+            <p>Vamos conversar! Estou aqui para ajudar você a brilhar ✨</p>
         </div>
     </section>
 
-    <!-- Serviços -->
-    <section id="servicos" class="services">
+    <section class="contact-section">
         <div class="container">
-            <h2 class="section-title">O QUE FAÇO</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">👗</div>
-                    <h3>Consultoria de Estilo</h3>
-                    <p>Orientação personalizada para descobrir e desenvolver seu estilo único e autêntico.</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Fale Comigo</h2>
+                    <p>Preencha o formulário ou me encontre nas redes sociais:</p>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">💬</span>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <a href="https://wa.me/SEU-NUMERO" target="_blank">+55 (XX) XXXXX-XXXX</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📷</span>
+                        <div>
+                            <strong>Instagram</strong>
+                            <a href="https://instagram.com/seu-perfil" target="_blank">@seuperfil</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📘</span>
+                        <div>
+                            <strong>Facebook</strong>
+                            <a href="https://facebook.com/seu-perfil" target="_blank">Vanessa Duran</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">📸</div>
-                    <h3>Ensaios Fotográficos</h3>
-                    <p>Registre sua beleza com ensaios profissionais cheios de estilo e personalidade.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3>Dicas de Moda</h3>
-                    <p>Inspirações e tendências para você se vestir com confiança e elegância no dia a dia.</p>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="nome">Seu Nome</label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Seu E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Assunto</label>
+                            <input type="text" id="assunto" name="assunto" placeholder="Consultoria, ensaio, dúvida...">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Sua Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem ✨</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Galeria -->
-    <section id="galeria" class="gallery">
-        <div class="container">
-            <h2 class="section-title">GALERIA</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="imagens/galeria-1.jpg" alt=""></div>
-                <div class="gallery-item"><img src="imagens/galeria-2.jpg" alt=""></div>
-                <div class="gallery-item"><img src="imagens/galeria-3.jpg" alt=""></div>
-                <div class="gallery-item"><img src="imagens/galeria-4.jpg" alt=""></div>
-                <div class="gallery-item"><img src="imagens/galeria-5.jpg" alt=""></div>
-                <div class="gallery-item"><img src="imagens/galeria-6.jpg" alt=""></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
     <footer>
         <div class="container">
             <h2>Vanessa Duran</h2>
             <p>Moda • Estilo • Beleza</p>
             <div class="footer-social">
-                <a href="https://wa.me/" target="_blank">WhatsApp</a>
-                <a href="https://facebook.com/" target="_blank">Facebook</a>
-                <a href="https://instagram.com/" target="_blank">Instagram</a>
+                <a href="https://wa.me/SEU-NUMERO" target="_blank">WhatsApp</a>
+                <a href="https://facebook.com/seu-perfil" target="_blank">Facebook</a>
+                <a href="https://instagram.com/seu-perfil" target="_blank">Instagram</a>
             </div>
             <div class="footer-links">
-                <a href="#inicio">Início</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#servicos">Serviços</a>
+                <a href="index.html#inicio">Início</a>
+                <a href="index.html#sobre">Sobre</a>
+                <a href="index.html#servicos">Serviços</a>
                 <a href="contato.html">Contato</a>
             </div>
             <p class="copyright">&copy; 2026 Vanessa Duran — Todos os direitos reservados.</p>
