@@ -180,8 +180,8 @@
       width: 7px;
       height: 7px;
       border-radius: 50%;
-      background: var(--pink);
-      box-shadow: 0 0 10px var(--pink);
+      background: var(--gold);
+      box-shadow: 0 0 10px var(--gold);
       animation: pulse-dot 2s ease-in-out infinite;
     }
 
@@ -433,7 +433,7 @@
       line-height: 1.55;
     }
 
-    /* PRODUTOS */
+    /* PRODUTOS - EM BREVE LANÇAMENTO & BLUR */
     .products-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -442,16 +442,11 @@
     }
 
     .product-card {
+      position: relative;
       background: var(--panel);
       border: 1px solid #2a1520;
       border-radius: var(--radius);
       overflow: hidden;
-      transition: transform var(--transition), border-color var(--transition);
-    }
-
-    .product-card:hover {
-      transform: translateY(-6px);
-      border-color: #ff4f9a55;
     }
 
     .product-img {
@@ -464,16 +459,45 @@
       height: 100%;
       object-fit: cover;
       object-position: top center;
-      transition: transform 0.4s ease;
+      filter: blur(20px);
+      transform: scale(1.08); /* Evita bordas brancas/vazadas do blur */
+      opacity: 0.75;
     }
 
-    .product-card:hover .product-img img {
-      transform: scale(1.05);
+    .product-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(16, 7, 13, 0.75);
+      backdrop-filter: blur(4px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      z-index: 2;
+    }
+
+    .product-overlay span {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .product-overlay p {
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     .product-info {
       padding: 18px 16px 20px;
       text-align: center;
+      opacity: 0.5;
     }
 
     .product-info h3 {
@@ -488,12 +512,6 @@
       color: var(--muted);
       font-size: 13px;
       margin-bottom: 14px;
-    }
-
-    .product-info .btn {
-      padding: 11px 20px;
-      font-size: 12px;
-      width: 100%;
     }
 
     /* FORM */
@@ -681,7 +699,7 @@
           <a href="#agendar">Agendar</a>
           <a href="#contato">Contato</a>
         </nav>
-        <div class="status">Atendimento online</div>
+        <div class="status">Em breve lançamento</div>
       </div>
     </header>
 
@@ -692,10 +710,10 @@
           <h1>Estilo que <span>realça</span> a sua essência</h1>
           <p>Peças selecionadas com carinho para mulheres que amam se sentir poderosas, elegantes e autênticas. Descubra looks que combinam com você.</p>
           <div class="hero-btns">
-            <a class="btn buy" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Quero%20comprar%20uma%20pe%C3%A7a.%20Pode%20me%20mostrar%20as%20op%C3%A7%C3%B5es%20dispon%C3%ADveis%3F" target="_blank" rel="noopener noreferrer">
-              🛍️ Comprar agora
+            <a class="btn buy" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Quero%20saber%20mais%20sobre%20o%20lan%C3%A7amento%20da%20nova%20cole%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">
+              ✨ Quero saber do lançamento
             </a>
-            <a class="btn" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Gostaria%20de%20conhecer%20as%20pe%C3%A7as%20dispon%C3%ADveis." target="_blank" rel="noopener noreferrer">
+            <a class="btn" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Gostaria%20de%20falar%20com%20voc%C3%AA." target="_blank" rel="noopener noreferrer">
               ♡ WhatsApp
             </a>
           </div>
@@ -703,8 +721,8 @@
         <div class="hero-visual">
           <img src="vanessa_hero.jpg" alt="Vanessa Duran — Moda feminina">
           <div class="hero-badge">
-            <strong>Nova coleção</strong>
-            Peças exclusivas · Nova Mamoré
+            <strong>Em breve</strong>
+            Nova Coleção · Nova Mamoré
           </div>
         </div>
       </section>
@@ -746,23 +764,24 @@
         </div>
       </section>
 
-      <!-- PRODUTOS -->
+      <!-- PRODUTOS COM BLUR / EM BREVE LANÇAMENTO -->
       <section class="section" id="produtos">
-        <div class="section-kicker">Coleção em destaque</div>
-        <h2>Peças que estão bombando</h2>
-        <p class="section-intro">Looks selecionados para você arrasar. Clique em comprar e fale direto no WhatsApp.</p>
+        <div class="section-kicker">Próxima Coleção</div>
+        <h2>Em breve lançamento</h2>
+        <p class="section-intro">Estamos preparando novidades incríveis para você. Fique por dentro e garanta a sua prioridade!</p>
 
         <div class="products-grid">
           <div class="product-card">
             <div class="product-img">
               <img src="produto1.jpg" alt="Vestido preto acetinado costas abertas">
             </div>
+            <div class="product-overlay">
+              <span>Em Breve</span>
+              <p>Lançamento Exclusivo</p>
+            </div>
             <div class="product-info">
               <h3>Vestido Preto Satin</h3>
               <p>Costas abertas · Mini · Super elegante</p>
-              <a class="btn buy" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Quero%20comprar%20o%20*Vestido%20Preto%20Satin*." target="_blank" rel="noopener noreferrer">
-                🛍️ Comprar
-              </a>
             </div>
           </div>
 
@@ -770,12 +789,13 @@
             <div class="product-img">
               <img src="produto2.jpg" alt="Vestido longo bege justo">
             </div>
+            <div class="product-overlay">
+              <span>Em Breve</span>
+              <p>Lançamento Exclusivo</p>
+            </div>
             <div class="product-info">
               <h3>Vestido Longo Bege</h3>
               <p>Justo · Elegante · Ideal para ocasiões</p>
-              <a class="btn buy" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Quero%20comprar%20o%20*Vestido%20Longo%20Bege*." target="_blank" rel="noopener noreferrer">
-                🛍️ Comprar
-              </a>
             </div>
           </div>
 
@@ -783,12 +803,13 @@
             <div class="product-img">
               <img src="produto3.jpg" alt="Vestido jeans tomara que caia">
             </div>
+            <div class="product-overlay">
+              <span>Em Breve</span>
+              <p>Lançamento Exclusivo</p>
+            </div>
             <div class="product-info">
               <h3>Vestido Jeans</h3>
               <p>Tomara que caia · Curto · Estiloso</p>
-              <a class="btn buy" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Quero%20comprar%20o%20*Vestido%20Jeans*." target="_blank" rel="noopener noreferrer">
-                🛍️ Comprar
-              </a>
             </div>
           </div>
         </div>
@@ -796,9 +817,9 @@
 
       <!-- ========== FORMULÁRIO DE AGENDAMENTO ========== -->
       <section class="form-section" id="agendar">
-        <div class="section-kicker">Atendimento fácil</div>
-        <h2>Reserve seu horário</h2>
-        <p class="section-intro" style="margin-bottom:0">Preencha os dados abaixo. Ao enviar, você será redirecionada para o WhatsApp com a mensagem pronta.</p>
+        <div class="section-kicker">Lista VIP</div>
+        <h2>Garanta acesso antecipado</h2>
+        <p class="section-intro" style="margin-bottom:0">Preencha os dados abaixo para receber as novidades do lançamento em primeira mão no WhatsApp.</p>
 
         <form class="form-grid" id="agendamentoForm" onsubmit="enviarWhatsApp(event)">
           <div class="form-group">
@@ -812,7 +833,7 @@
           </div>
 
           <div class="form-group">
-            <label for="servico">O que você procura?</label>
+            <label for="servico">O que você mais espera ver?</label>
             <select id="servico" name="servico" required>
               <option value="" disabled selected>Escolha uma opção</option>
               <option value="Look completo">Look completo</option>
@@ -825,7 +846,7 @@
           </div>
 
           <div class="form-group">
-            <label for="preferencia">Preferência de horário</label>
+            <label for="preferencia">Preferência de atendimento</label>
             <select id="preferencia" name="preferencia">
               <option value="" selected>Sem preferência</option>
               <option value="Manhã">Manhã</option>
@@ -841,8 +862,8 @@
           </div>
 
           <div class="form-actions">
-            <button type="submit" class="btn buy">🛍️ Enviar e comprar no WhatsApp</button>
-            <a class="btn" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Gostaria%20de%20conhecer%20as%20pe%C3%A7as%20dispon%C3%ADveis." target="_blank" rel="noopener noreferrer">
+            <button type="submit" class="btn buy">✨ Entrar na Lista VIP do Lançamento</button>
+            <a class="btn" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Gostaria%20de%20saber%20mais%20sobre%20o%20lan%C3%A7amento." target="_blank" rel="noopener noreferrer">
               ♡ Falar no WhatsApp
             </a>
           </div>
@@ -854,15 +875,15 @@
       <!-- CONTATO -->
       <section class="contact" id="contato">
         <div class="section-kicker">Contato direto</div>
-        <h2>Vamos encontrar o seu look?</h2>
-        <p>Prefere falar direto? Estou a uma mensagem de distância.</p>
+        <h2>Quer saber antes de todo mundo?</h2>
+        <p>Estou a uma mensagem de distância.</p>
         <p class="location">⌖ Nova Mamoré – RO · Atendimento personalizado · Hora marcada</p>
 
         <div class="cta-row">
-          <a class="btn buy" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Quero%20comprar%20uma%20pe%C3%A7a.%20Pode%20me%20mostrar%20as%20op%C3%A7%C3%B5es%20dispon%C3%ADveis%3F" target="_blank" rel="noopener noreferrer">
-            🛍️ Comprar agora
+          <a class="btn buy" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Quero%20saber%20sobre%20o%20lan%C3%A7amento%20da%20cole%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">
+            ✨ Quero ver o lançamento
           </a>
-          <a class="btn" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Gostaria%20de%20conhecer%20as%20pe%C3%A7as%20da%20loja." target="_blank" rel="noopener noreferrer">
+          <a class="btn" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Gostaria%20de%20saber%20mais%20sobre%20as%20novidades." target="_blank" rel="noopener noreferrer">
             ♡ WhatsApp
           </a>
           <a class="btn secondary" href="https://www.instagram.com/_vanessaduran__" target="_blank" rel="noopener noreferrer">
@@ -923,15 +944,16 @@
       const mensagem = document.getElementById('mensagem').value.trim();
 
       let texto = `Olá, Vanessa! Meu nome é *${nome}*.%0A%0A`;
-      texto += `Gostaria de: *${servico}*%0A`;
-      texto += `Preferência de horário: ${preferencia}%0A`;
+      texto += `Quero participar da Lista VIP para o *Lançamento*!%0A`;
+      texto += `Interesse: *${servico}*%0A`;
+      texto += `Preferência de atendimento: ${preferencia}%0A`;
       texto += `Meu WhatsApp: ${telefone}%0A`;
 
       if (mensagem) {
         texto += `%0AObservações: ${mensagem}`;
       }
 
-      texto += `%0A%0AAguardo seu retorno! 👗✨`;
+      texto += `%0A%0AAguardo novidades! 👗✨`;
 
       const url = `https://wa.me/5569999375829?text=${texto}`;
       window.open(url, '_blank');
@@ -939,8 +961,8 @@
   </script>
 
   <!-- Botão flutuante WhatsApp -->
-  <a class="float-wa" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Quero%20comprar%20uma%20pe%C3%A7a." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <a class="float-wa" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Quero%20saber%20sobre%20o%20lan%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 </body>
-    </html>
+</html>
