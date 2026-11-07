@@ -312,6 +312,8 @@
       height: 100%;
       object-fit: cover;
       object-position: top center;
+      filter: blur(30px); /* 30% desfoque aplicado */
+      transform: scale(1.12);
     }
 
     .hero-badge {
@@ -386,6 +388,8 @@
       height: 100%;
       object-fit: cover;
       object-position: top;
+      filter: blur(30px); /* 30% desfoque aplicado */
+      transform: scale(1.12);
     }
 
     .about-copy p {
@@ -433,7 +437,7 @@
       line-height: 1.55;
     }
 
-    /* PRODUTOS - EM BREVE LANÇAMENTO & BLUR */
+    /* PRODUTOS - EM MANUTENÇÃO & BLUR 30% */
     .products-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -459,16 +463,16 @@
       height: 100%;
       object-fit: cover;
       object-position: top center;
-      filter: blur(20px);
-      transform: scale(1.08); /* Evita bordas brancas/vazadas do blur */
+      filter: blur(30px); /* 30% desfoque aplicado */
+      transform: scale(1.12);
       opacity: 0.75;
     }
 
     .product-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(16, 7, 13, 0.75);
-      backdrop-filter: blur(4px);
+      background: rgba(16, 7, 13, 0.78);
+      backdrop-filter: blur(6px);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -699,7 +703,7 @@
           <a href="#agendar">Agendar</a>
           <a href="#contato">Contato</a>
         </nav>
-        <div class="status">Em breve lançamento</div>
+        <div class="status">Em manutenção</div>
       </div>
     </header>
 
@@ -708,10 +712,10 @@
       <section class="hero">
         <div class="hero-copy">
           <h1>Estilo que <span>realça</span> a sua essência</h1>
-          <p>Peças selecionadas com carinho para mulheres que amam se sentir poderosas, elegantes e autênticas. Descubra looks que combinam com você.</p>
+          <p>Estamos passando por atualizações para trazer novidades incríveis. Em breve retornaremos com tudo!</p>
           <div class="hero-btns">
-            <a class="btn buy" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Quero%20saber%20mais%20sobre%20o%20lan%C3%A7amento%20da%20nova%20cole%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">
-              ✨ Quero saber do lançamento
+            <a class="btn buy" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Gostaria%20de%20saber%20sobre%20a%20manuten%C3%A7%C3%A3o%20da%20loja." target="_blank" rel="noopener noreferrer">
+              🛠️ Falar sobre a manutenção
             </a>
             <a class="btn" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Gostaria%20de%20falar%20com%20voc%C3%AA." target="_blank" rel="noopener noreferrer">
               ♡ WhatsApp
@@ -721,8 +725,8 @@
         <div class="hero-visual">
           <img src="vanessa_hero.jpg" alt="Vanessa Duran — Moda feminina">
           <div class="hero-badge">
-            <strong>Em breve</strong>
-            Nova Coleção · Nova Mamoré
+            <strong>Em Manutenção</strong>
+            Voltamos em breve · Nova Mamoré
           </div>
         </div>
       </section>
@@ -736,8 +740,8 @@
           <div class="about-copy">
             <div class="section-kicker">Um estilo especial</div>
             <h2>Olá, sou a Vanessa!</h2>
-            <p>Sou a Vanessa Duran, apaixonada por moda e por ajudar mulheres a se sentirem incríveis em cada ocasião. Na minha loja você encontra peças selecionadas com cuidado, unindo tendência, conforto e personalidade.</p>
-            <p>Atendo em <strong>Nova Mamoré – RO</strong>, com atendimento personalizado e hora marcada. Será um prazer ajudar você a encontrar o look que combina com o seu estilo.</p>
+            <p>Sou a Vanessa Duran, apaixonada por moda e por ajudar mulheres a se sentirem incríveis em cada ocasião. No momento estamos em manutenção para aprimorar a experiência da nossa loja.</p>
+            <p>Atendo em <strong>Nova Mamoré – RO</strong>, com atendimento personalizado e hora marcada. Fique à vontade para nos chamar no WhatsApp!</p>
           </div>
         </div>
       </section>
@@ -764,11 +768,11 @@
         </div>
       </section>
 
-      <!-- PRODUTOS COM BLUR / EM BREVE LANÇAMENTO -->
+      <!-- PRODUTOS COM BLUR 30% / EM MANUTENÇÃO -->
       <section class="section" id="produtos">
-        <div class="section-kicker">Próxima Coleção</div>
-        <h2>Em breve lançamento</h2>
-        <p class="section-intro">Estamos preparando novidades incríveis para você. Fique por dentro e garanta a sua prioridade!</p>
+        <div class="section-kicker">Catálogo temporariamente indisponível</div>
+        <h2>Loja em Manutenção</h2>
+        <p class="section-intro">Estamos renovando o nosso espaço e as nossas coleções. Retornaremos em breve!</p>
 
         <div class="products-grid">
           <div class="product-card">
@@ -776,8 +780,8 @@
               <img src="produto1.jpg" alt="Vestido preto acetinado costas abertas">
             </div>
             <div class="product-overlay">
-              <span>Em Breve</span>
-              <p>Lançamento Exclusivo</p>
+              <span>Em Manutenção</span>
+              <p>Retornamos em breve</p>
             </div>
             <div class="product-info">
               <h3>Vestido Preto Satin</h3>
@@ -790,8 +794,8 @@
               <img src="produto2.jpg" alt="Vestido longo bege justo">
             </div>
             <div class="product-overlay">
-              <span>Em Breve</span>
-              <p>Lançamento Exclusivo</p>
+              <span>Em Manutenção</span>
+              <p>Retornamos em breve</p>
             </div>
             <div class="product-info">
               <h3>Vestido Longo Bege</h3>
@@ -804,8 +808,8 @@
               <img src="produto3.jpg" alt="Vestido jeans tomara que caia">
             </div>
             <div class="product-overlay">
-              <span>Em Breve</span>
-              <p>Lançamento Exclusivo</p>
+              <span>Em Manutenção</span>
+              <p>Retornamos em breve</p>
             </div>
             <div class="product-info">
               <h3>Vestido Jeans</h3>
@@ -817,9 +821,9 @@
 
       <!-- ========== FORMULÁRIO DE AGENDAMENTO ========== -->
       <section class="form-section" id="agendar">
-        <div class="section-kicker">Lista VIP</div>
-        <h2>Garanta acesso antecipado</h2>
-        <p class="section-intro" style="margin-bottom:0">Preencha os dados abaixo para receber as novidades do lançamento em primeira mão no WhatsApp.</p>
+        <div class="section-kicker">Contato durante a manutenção</div>
+        <h2>Deixe sua mensagem</h2>
+        <p class="section-intro" style="margin-bottom:0">Preencha os dados abaixo e fale conosco diretamente no WhatsApp para tirar dúvidas ou fazer encomendas.</p>
 
         <form class="form-grid" id="agendamentoForm" onsubmit="enviarWhatsApp(event)">
           <div class="form-group">
@@ -833,14 +837,12 @@
           </div>
 
           <div class="form-group">
-            <label for="servico">O que você mais espera ver?</label>
+            <label for="servico">Assunto</label>
             <select id="servico" name="servico" required>
               <option value="" disabled selected>Escolha uma opção</option>
-              <option value="Look completo">Look completo</option>
-              <option value="Vestido">Vestido</option>
-              <option value="Conjunto">Conjunto</option>
-              <option value="Peças avulsas">Peças avulsas</option>
-              <option value="Consultoria de estilo">Consultoria de estilo</option>
+              <option value="Dúvida sobre peças">Dúvida sobre peças</option>
+              <option value="Encomenda">Encomenda</option>
+              <option value="Atendimento especial">Atendimento especial</option>
               <option value="Outro / Dúvida">Outro / Dúvida</option>
             </select>
           </div>
@@ -858,12 +860,12 @@
 
           <div class="form-group full">
             <label for="mensagem">Observações (opcional)</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Conte um pouco sobre o estilo que você gosta, ocasião, cores preferidas..."></textarea>
+            <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem ou pedido..."></textarea>
           </div>
 
           <div class="form-actions">
-            <button type="submit" class="btn buy">✨ Entrar na Lista VIP do Lançamento</button>
-            <a class="btn" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Gostaria%20de%20saber%20mais%20sobre%20o%20lan%C3%A7amento." target="_blank" rel="noopener noreferrer">
+            <button type="submit" class="btn buy">🛠️ Enviar mensagem no WhatsApp</button>
+            <a class="btn" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Gostaria%20de%20falar%20com%20voc%C3%AA." target="_blank" rel="noopener noreferrer">
               ♡ Falar no WhatsApp
             </a>
           </div>
@@ -875,16 +877,13 @@
       <!-- CONTATO -->
       <section class="contact" id="contato">
         <div class="section-kicker">Contato direto</div>
-        <h2>Quer saber antes de todo mundo?</h2>
-        <p>Estou a uma mensagem de distância.</p>
+        <h2>Estamos reformando para você</h2>
+        <p>Ainda estamos por aqui! Fale direto no WhatsApp.</p>
         <p class="location">⌖ Nova Mamoré – RO · Atendimento personalizado · Hora marcada</p>
 
         <div class="cta-row">
-          <a class="btn buy" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Quero%20saber%20sobre%20o%20lan%C3%A7amento%20da%20cole%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">
-            ✨ Quero ver o lançamento
-          </a>
-          <a class="btn" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Gostaria%20de%20saber%20mais%20sobre%20as%20novidades." target="_blank" rel="noopener noreferrer">
-            ♡ WhatsApp
+          <a class="btn buy" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Gostaria%20de%20falar%20sobre%20a%20manuten%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">
+            🛠️ Falar no WhatsApp
           </a>
           <a class="btn secondary" href="https://www.instagram.com/_vanessaduran__" target="_blank" rel="noopener noreferrer">
             ◎ @_vanessaduran__
@@ -944,16 +943,16 @@
       const mensagem = document.getElementById('mensagem').value.trim();
 
       let texto = `Olá, Vanessa! Meu nome é *${nome}*.%0A%0A`;
-      texto += `Quero participar da Lista VIP para o *Lançamento*!%0A`;
-      texto += `Interesse: *${servico}*%0A`;
+      texto += `Entrando em contato durante a *Manutenção* da loja.%0A`;
+      texto += `Assunto: *${servico}*%0A`;
       texto += `Preferência de atendimento: ${preferencia}%0A`;
       texto += `Meu WhatsApp: ${telefone}%0A`;
 
       if (mensagem) {
-        texto += `%0AObservações: ${mensagem}`;
+        texto += `%0AMensagem: ${mensagem}`;
       }
 
-      texto += `%0A%0AAguardo novidades! 👗✨`;
+      texto += `%0A%0AAguardo retorno! 🛠️✨`;
 
       const url = `https://wa.me/5569999375829?text=${texto}`;
       window.open(url, '_blank');
@@ -961,7 +960,7 @@
   </script>
 
   <!-- Botão flutuante WhatsApp -->
-  <a class="float-wa" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Quero%20saber%20sobre%20o%20lan%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <a class="float-wa" href="https://wa.me/5569999375829?text=Ol%C3%A1%2C%20Vanessa!%20Gostaria%20de%20falar%20sobre%20a%20manuten%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 </body>
